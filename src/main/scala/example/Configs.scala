@@ -2,7 +2,7 @@ package example
 
 import chisel3._
 import freechips.rocketchip.config.{Parameters, Config}
-import freechips.rocketchip.coreplex.{WithRoccExample, WithNMemoryChannels, WithNBigCores, WithRV32}
+import freechips.rocketchip.coreplex._
 import freechips.rocketchip.devices.tilelink.BootROMParams
 import freechips.rocketchip.diplomacy.LazyModule
 import freechips.rocketchip.tile.XLen
@@ -38,6 +38,35 @@ class WithSimBlockDevice extends Config((site, here, up) => {
     top
   }
 })
+
+
+
+
+package object Configs {
+
+  implicit class HexHelper(private val sc: StringContext)
+    extends AnyVal {
+    def rh(args: Any*): Long = {
+      val orig = sc
+        .s(args: _*)
+        .replace("_",
+                  "")
+      Integer
+        .parseInt(orig,
+                   16)
+    }
+  }
+
+}
+// use example top + rocketchip default config
+// with 512M mem + AXI4 master dram port + bootrom
+/*class My512MEMPlusPWMConfig
+  extends Config(new WithExtMemSize(0x20000000) ++ new DefaultExampleConfig)
+*/
+class My512MEMPlusPWMConfig
+  extends Config(new WithExtMemSize(0x20000000) ++
+    new PWMConfig)
+
 
 class BaseExampleConfig extends Config(
   new WithBootROM ++

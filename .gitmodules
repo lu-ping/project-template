@@ -1,6 +1,7 @@
 [submodule "rocket-chip"]
 	path = rocket-chip
-	url = https://github.com/ucb-bar/rocket-chip.git
+	url = https://github.com/lu-ping/rocket-chip.git
+	branch = my-rocket-chip-idea
 [submodule "testchipip"]
 	path = testchipip
 	url = https://github.com/ucb-bar/testchipip.git

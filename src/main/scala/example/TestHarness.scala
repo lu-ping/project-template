@@ -3,7 +3,8 @@ package example
 import chisel3._
 import freechips.rocketchip.diplomacy.LazyModule
 import freechips.rocketchip.config.{Field, Parameters}
-import testchipip.GeneratorApp
+import freechips.rocketchip.system.Generator.names
+import freechips.rocketchip.util.GeneratorApp
 
 case object BuildTop extends Field[(Clock, Bool, Parameters) => ExampleTopModule[ExampleTop]]
 
@@ -13,10 +14,13 @@ class TestHarness(implicit val p: Parameters) extends Module {
   })
 
   val dut = p(BuildTop)(clock, reset.toBool, p)
-  dut.connectSimAXIMem()
-  io.success := dut.connectSimSerial()
+  dut.dontTouchPorts()
 }
 
 object Generator extends GeneratorApp {
+  val longName = names.topModuleProject + "." + names.configs
   generateFirrtl
+  generateAnno
+  generateROMs
+  generateArtefacts
 }
