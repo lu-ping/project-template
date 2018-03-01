@@ -1,0 +1,47 @@
+diff --git a/src/main/scala/coreplex/InterruptBus.scala b/src/main/scala/coreplex/InterruptBus.scala
+index 4c04d992..f5ac26da 100644
+--- a/src/main/scala/coreplex/InterruptBus.scala
++++ b/src/main/scala/coreplex/InterruptBus.scala
+@@ -81,5 +81,5 @@ trait HasExtInterruptsModuleImp extends LazyModuleImp with HasExtInterruptsBundl
+   val outer: HasExtInterrupts
+   val interrupts = IO(UInt(INPUT, width = outer.nExtInterrupts))
+ 
+-  outer.extInterrupts.in.map(_._1).flatten.zipWithIndex.foreach { case(o, i) => o := interrupts(i) }
++  outer.extInterrupts.out.map(_._1).flatten.zipWithIndex.foreach { case(o, i) => o := interrupts(i) }
+ }
+diff --git a/src/main/scala/rocket/RocketCore.scala b/src/main/scala/rocket/RocketCore.scala
+index 7ac6b43d..ec4eae98 100644
+--- a/src/main/scala/rocket/RocketCore.scala
++++ b/src/main/scala/rocket/RocketCore.scala
+@@ -695,14 +695,14 @@ class Rocket(implicit p: Parameters) extends CoreModule()(p)
+          wb_reg_inst(24,20), Reg(next=Reg(next=ex_rs(1))),
+          csr.io.trace(0).insn, csr.io.trace(0).insn)
+   }
+-
++/*
+   val max_core_cycles = PlusArg("max-core-cycles",
+     default = 0,
+     docstring = "Maximum Core Clock cycles simulation may run before timeout. Ignored if 0 (Default).")
+   when (max_core_cycles > UInt(0)) {
+     assert (csr.io.time < max_core_cycles, "Maximum Core Cycles reached.")
+   }
+-
++*/
+   def checkExceptions(x: Seq[(Bool, UInt)]) =
+     (x.map(_._1).reduce(_||_), PriorityMux(x))
+ 
+diff --git a/src/main/scala/tilelink/Monitor.scala b/src/main/scala/tilelink/Monitor.scala
+index 9b258684..029f43b6 100644
+--- a/src/main/scala/tilelink/Monitor.scala
++++ b/src/main/scala/tilelink/Monitor.scala
+@@ -438,8 +438,8 @@ class TLMonitor(args: TLMonitorArgs) extends TLMonitorBase(args)
+     inflight := (inflight | a_set) & ~d_clr
+ 
+     val watchdog = RegInit(UInt(0, width = 32))
+-    val limit = PlusArg("tilelink_timeout")
+-    assert (!inflight.orR || limit === UInt(0) || watchdog < limit, "TileLink timeout expired" + extra)
++    //val limit = PlusArg("tilelink_timeout")
++    //assert (!inflight.orR || limit === UInt(0) || watchdog < limit, "TileLink timeout expired" + extra)
+ 
+     watchdog := watchdog + UInt(1)
+     when (bundle.a.fire() || bundle.d.fire()) { watchdog := UInt(0) }

@@ -1,9 +1,10 @@
 package example
 
 import chisel3._
+import chisel3.core.withClock
 import chisel3.util._
 import freechips.rocketchip.coreplex.HasPeripheryBus
-import freechips.rocketchip.config.{Parameters, Field}
+import freechips.rocketchip.config.{Field, Parameters}
 import freechips.rocketchip.diplomacy._
 import freechips.rocketchip.regmapper.{HasRegMap, RegField}
 import freechips.rocketchip.tilelink._
@@ -19,14 +20,15 @@ class PWMBase(w: Int) extends Module {
     val enable = Input(Bool())
   })
 
-  // The counter should count up until period is reached
-  val counter = Reg(UInt(w.W))
+    // The counter should count up until period is reached
+    val counter = Reg(UInt(w.W))
 
-  when (counter >= (io.period - 1.U)) {
-    counter := 0.U
-  } .otherwise {
-    counter := counter + 1.U
-  }
+    when(counter >= (io.period - 1.U)) {
+      counter := 0.U
+    }
+      .otherwise {
+        counter := counter + 1.U
+      }
 
   // If PWM is enabled, pwmout is high when counter < duty
   // If PWM is not enabled, it will always be low
@@ -35,6 +37,7 @@ class PWMBase(w: Int) extends Module {
 
 trait PWMTLBundle extends Bundle {
   val pwmout = Output(Bool())
+  val pwmclk=Input(Clock())
 }
 
 trait PWMTLModule extends HasRegMap {
@@ -52,7 +55,7 @@ trait PWMTLModule extends HasRegMap {
   // Is the PWM even running at all?
   val enable = RegInit(false.B)
 
-  val base = Module(new PWMBase(w))
+  val base = withClock(io.pwmclk)(Module(new PWMBase(w)))
   io.pwmout := base.io.pwmout
   base.io.period := period
   base.io.duty := duty
@@ -71,8 +74,7 @@ class PWMTL(c: PWMParams)(implicit p: Parameters)
   extends TLRegisterRouter(
     c.address, "pwm", Seq("ucbbar,pwm"),
     beatBytes = c.beatBytes)(
-      new TLRegBundle(c, _) with PWMTLBundle)(
-      new TLRegModule(c, _, _) with PWMTLModule)
+      new TLRegBundle(c, _) with PWMTLBundle)(new TLRegModule(c, _, _) with PWMTLModule)
 
 trait HasPeripheryPWM extends HasPeripheryBus {
   implicit val p: Parameters
@@ -89,7 +91,11 @@ trait HasPeripheryPWMModuleImp extends LazyModuleImp {
   implicit val p: Parameters
   val outer: HasPeripheryPWM
 
-  val pwmout = IO(Output(Bool()))
+  val pwmout = IO(new Bundle {
+    val clk=Input(Clock())
+    val out=Output(Bool())
+  })
 
-  pwmout := outer.pwm.module.io.pwmout
+  pwmout.out := outer.pwm.module.io.pwmout
+  outer.pwm.module.io.pwmclk := pwmout.clk
 }

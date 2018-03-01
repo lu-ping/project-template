@@ -8,20 +8,21 @@ import freechips.rocketchip.util.DontTouch
 import testchipip._
 
 class ExampleTop(implicit p: Parameters) extends RocketCoreplex
+    with HasAsyncExtInterrupts
     with HasMasterAXI4MemPort
+    with HasMasterAXI4MMIOPort
     with HasPeripheryBootROM
     with HasSystemErrorSlave
-    with HasNoDebug
-    with HasPeripherySerial {
+    {
   override lazy val module = new ExampleTopModule(this)
 }
 
 class ExampleTopModule[+L <: ExampleTop](l: L) extends RocketCoreplexModule(l)
+    with HasExtInterruptsModuleImp
     with HasRTCModuleImp
     with HasMasterAXI4MemPortModuleImp
+    with HasMasterAXI4MMIOPortModuleImp
     with HasPeripheryBootROMModuleImp
-    with HasNoDebugModuleImp
-    with HasPeripherySerialModuleImp
     with DontTouch
 
 class ExampleTopWithPWM(implicit p: Parameters) extends ExampleTop

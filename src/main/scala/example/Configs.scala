@@ -10,7 +10,8 @@ import testchipip._
 
 class WithBootROM extends Config((site, here, up) => {
   case BootROMParams => BootROMParams(
-    contentFileName = s"./bootrom/bootrom.rv${site(XLen)}.img")
+    //contentFileName = s"./bootrom/bootrom.rv${site(XLen)}.img")
+    contentFileName = s"./bootrom/bootrom.img")
 })
 
 class WithExampleTop extends Config((site, here, up) => {
@@ -60,13 +61,30 @@ package object Configs {
 }
 // use example top + rocketchip default config
 // with 512M mem + AXI4 master dram port + bootrom
+// 2 ways d$, 8KB
+
 /*class My512MEMPlusPWMConfig
   extends Config(new WithExtMemSize(0x20000000) ++ new DefaultExampleConfig)
 */
+/*
+  the order of new is important, the precede key/value will override the key/value followed
+ */
 class My512MEMPlusPWMConfig
   extends Config(new WithExtMemSize(0x20000000) ++
+    new WithNExtTopInterrupts(4) ++
+    new WithL1DCacheWays(2)++
+    new WithBootROMHang(0x10000)++
+    new WithPeripheryBusFeq(50000000)++
     new PWMConfig)
 
+
+class WithPeripheryBusFeq(feq: BigInt) extends Config ((site, here, up) => {
+  case PeripheryBusKey => up(PeripheryBusKey, site).copy(frequency = feq)
+})
+
+class WithBootROMHang(hang: BigInt) extends Config((site, here, up) => {
+  case BootROMParams => up(BootROMParams, site).copy(hang = hang)
+})
 
 class BaseExampleConfig extends Config(
   new WithBootROM ++

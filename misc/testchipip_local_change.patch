@@ -1,0 +1,35 @@
+diff --git a/src/main/scala/SerialAdapter.scala b/src/main/scala/SerialAdapter.scala
+index 85bc244..65ebe93 100644
+--- a/src/main/scala/SerialAdapter.scala
++++ b/src/main/scala/SerialAdapter.scala
+@@ -40,7 +40,7 @@ class SerialAdapterModule(outer: SerialAdapter) extends LazyModuleImp(outer) {
+ 
+   val cmd = Reg(UInt(w.W))
+   val addr = Reg(UInt(wordLen.W))
+-  val len = Reg(UInt(wordLen.W))
++  val len = Reg(UInt(32.W))
+   val body = Reg(Vec(nChunksPerBeat, UInt(w.W)))
+   val bodyValid = Reg(UInt(nChunksPerBeat.W))
+   val idx = Reg(UInt(log2Up(nChunksPerBeat).W))
+@@ -59,12 +59,17 @@ class SerialAdapterModule(outer: SerialAdapter) extends LazyModuleImp(outer) {
+   val nextAddr = Cat(beatAddr + 1.U, 0.U(byteAddrBits.W))
+ 
+   val wmask = FillInterleaved(w/8, bodyValid)
+-  val addr_size = nextAddr - addr
+-  val len_size = Cat(len + 1.U, 0.U(log2Ceil(w/8).W))
++  val addr_size = beatBytes.U - addr(byteAddrBits-1,0)
++  val len_size = Cat(len, 0.U(log2Ceil(w/8).W))
++  //val len_size = Cat(len + 1.U, 0.U(log2Ceil(w/8).W))
+   val raw_size = Mux(len_size < addr_size, len_size, addr_size)
+-  val rsize = MuxLookup(raw_size, byteAddrBits.U,
++  /*val rsize = MuxLookup(raw_size, byteAddrBits.U,
+     (0 until log2Ceil(beatBytes)).map(i => ((1 << i).U -> i.U)))
+-
++    */
++  var res=byteAddrBits.U
++  for((k,v) <- ((0 until log2Ceil(beatBytes)).map(i => ((1 << i).U -> i.U))).reverse)
++    res=Mux(raw_size<k,v,res)
++  val rsize=res
+   val pow2size = PopCount(raw_size) === 1.U
+   val byteAddr = Mux(pow2size, addr(byteAddrBits - 1, 0), 0.U)
+ 
