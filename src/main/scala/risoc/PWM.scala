@@ -1,9 +1,9 @@
-package example
+package risoc
 
 import chisel3._
 import chisel3.core.withClock
 import chisel3.util._
-import freechips.rocketchip.coreplex.HasPeripheryBus
+import freechips.rocketchip.subsystem.BaseSubsystem
 import freechips.rocketchip.config.{Field, Parameters}
 import freechips.rocketchip.diplomacy._
 import freechips.rocketchip.regmapper.{HasRegMap, RegField}
@@ -76,7 +76,7 @@ class PWMTL(c: PWMParams)(implicit p: Parameters)
     beatBytes = c.beatBytes)(
       new TLRegBundle(c, _) with PWMTLBundle)(new TLRegModule(c, _, _) with PWMTLModule)
 
-trait HasPeripheryPWM extends HasPeripheryBus {
+trait HasPeripheryPWM extends BaseSubsystem {
   implicit val p: Parameters
 
   private val address = 0x2000
@@ -84,7 +84,7 @@ trait HasPeripheryPWM extends HasPeripheryBus {
   val pwm = LazyModule(new PWMTL(
     PWMParams(address, pbus.beatBytes))(p))
 
-  pwm.node := pbus.toVariableWidthSlaves
+  pwm.node := pbus.toVariableWidthSlave()()
 }
 
 trait HasPeripheryPWMModuleImp extends LazyModuleImp {

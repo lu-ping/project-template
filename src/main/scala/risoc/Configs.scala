@@ -1,8 +1,8 @@
-package example
+package risoc
 
 import chisel3._
 import freechips.rocketchip.config.{Parameters, Config}
-import freechips.rocketchip.coreplex._
+import freechips.rocketchip.subsystem._
 import freechips.rocketchip.devices.tilelink.BootROMParams
 import freechips.rocketchip.diplomacy.LazyModule
 import freechips.rocketchip.tile.XLen
@@ -15,13 +15,11 @@ class WithBootROM extends Config((site, here, up) => {
 })
 
 class WithExampleTop extends Config((site, here, up) => {
-  case BuildTop => (clock: Clock, reset: Bool, p: Parameters) =>
-    Module(LazyModule(new ExampleTop()(p)).module)
+  case BuildTop => (clock: Clock, reset: Bool, p: Parameters) =>new ExampleTop()(p)
 })
 
 class WithPWM extends Config((site, here, up) => {
-  case BuildTop => (clock: Clock, reset: Bool, p: Parameters) =>
-    Module(LazyModule(new ExampleTopWithPWM()(p)).module)
+  case BuildTop => (clock: Clock, reset: Bool, p: Parameters) => new ExampleTopWithPWM()(p)
 })
 
 class WithBlockDeviceModel extends Config((site, here, up) => {

@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/bootrom" />
+      <excludeFolder url="file://$MODULE_DIR$/misc" />
       <excludeFolder url="file://$MODULE_DIR$/rocket-chip" />
       <excludeFolder url="file://$MODULE_DIR$/tests" />
       <excludeFolder url="file://$MODULE_DIR$/verisim" />
@@ -35,5 +36,11 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="antlr4-runtime-4.7" level="project" />
+    <orderEntry type="library" name="jackson-annotations-2.8.10" level="project" />
+    <orderEntry type="library" name="jackson-core-2.8.10" level="project" />
+    <orderEntry type="library" name="jackson-databind-2.8.10" level="project" />
+    <orderEntry type="library" name="json4s-ast_2.11-3.5.0" level="project" />
+    <orderEntry type="library" name="json4s-core_2.11-3.5.0" level="project" />
+    <orderEntry type="library" name="json4s-jackson_2.11-3.5.0" level="project" />
   </component>
 </module>

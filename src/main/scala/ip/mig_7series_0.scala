@@ -3,7 +3,7 @@ package ip
 import chisel3._
 import chisel3.util.HasBlackBoxResource
 import freechips.rocketchip.config.Parameters
-import freechips.rocketchip.coreplex._
+import freechips.rocketchip.subsystem._
 import freechips.rocketchip.diplomacy._
 import freechips.rocketchip.amba.axi4._
 import freechips.rocketchip.util.HeterogeneousBag

@@ -2,20 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="422356eb-d437-48c5-bfaa-a30ec4bd1826" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/scala_settings.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bootrom/bootrom.img" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/misc/mig_7series_0.v" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/ip/HasPeripheryUART.scala" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/ip/format.sc" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/ip/mig_7series_0.scala" />
+      <change beforePath="$PROJECT_DIR$/.gitmodules" afterPath="$PROJECT_DIR$/.gitmodules" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/myrocketchip.iml" afterPath="$PROJECT_DIR$/myrocketchip.iml" />
       <change beforePath="$PROJECT_DIR$/rocket-chip" afterPath="$PROJECT_DIR$/rocket-chip" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/example/Configs.scala" afterPath="$PROJECT_DIR$/src/main/scala/example/Configs.scala" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/example/PWM.scala" afterPath="$PROJECT_DIR$/src/main/scala/example/PWM.scala" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/example/TestHarness.scala" afterPath="$PROJECT_DIR$/src/main/scala/example/TestHarness.scala" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/example/Top.scala" afterPath="$PROJECT_DIR$/src/main/scala/example/Top.scala" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/example/Configs.scala" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/example/PWM.scala" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/example/TestHarness.scala" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/example/Top.scala" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/ip/mig_7series_0.scala" afterPath="$PROJECT_DIR$/src/main/scala/ip/mig_7series_0.scala" />
+      <change beforePath="$PROJECT_DIR$/testchipip" afterPath="$PROJECT_DIR$/testchipip" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,71 +23,69 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RocketCore.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/rocket/RocketCore.scala">
+      <file leaf-file-name="PWM.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/risoc/PWM.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="210" column="33" lean-forward="false" selection-start-line="210" selection-start-column="33" selection-end-line="210" selection-end-column="33" />
-              <folding />
+            <state relative-caret-position="0">
+              <caret line="78" column="6" lean-forward="false" selection-start-line="78" selection-start-column="6" selection-end-line="78" selection-end-column="6" />
+              <folding>
+                <element signature="e#15#31#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FPU.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/tile/FPU.scala">
+      <file leaf-file-name="Top.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/risoc/Top.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="45" column="21" lean-forward="false" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
-              <folding />
+            <state relative-caret-position="336">
+              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding>
+                <element signature="e#15#31#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Configs.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/system/Configs.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/risoc/Configs.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="168">
+              <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+              <folding>
+                <element signature="e#15#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestHarness.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/risoc/TestHarness.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding>
+                <element signature="e#15#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Config.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/config/Config.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="2" column="35" lean-forward="false" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CLINT.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/devices/tilelink/CLINT.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CSR.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/rocket/CSR.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6405">
-              <caret line="313" column="30" lean-forward="false" selection-start-line="313" selection-start-column="30" selection-end-line="313" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Interrupts.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/tile/Interrupts.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1302">
-              <caret line="67" column="13" lean-forward="false" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RocketTile.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/tile/RocketTile.scala">
+      <file leaf-file-name="Unittests.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testchipip/src/main/scala/Unittests.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="147">
-              <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+              <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -108,7 +102,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>write</find>
       <find>RegFile</find>
       <find>CSR</find>
       <find>pc</find>
@@ -138,6 +131,7 @@
       <find>id_ctrl.fp</find>
       <find>illegal_rm</find>
       <find>fp_illegal</find>
+      <find>BuildCore</find>
     </findStrings>
     <replaceStrings>
       <replace>val \2=\1()</replace>
@@ -172,9 +166,7 @@
         <option value="$PROJECT_DIR$/rocket-chip/src/main/scala/diplomacy/Nodes.scala" />
         <option value="$PROJECT_DIR$/rocket-chip/src/main/scala/amba/axi4/Parameters.scala" />
         <option value="$PROJECT_DIR$/rocket-chip/src/main/scala/tilelink/Monitor.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/ip/mig_7series_0.scala" />
         <option value="$PROJECT_DIR$/rocket-chip/src/main/scala/coreplex/SystemBus.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/example/TestHarness.scala" />
         <option value="$PROJECT_DIR$/rocket-chip/src/main/scala/tilelink/Parameters.scala" />
         <option value="$PROJECT_DIR$/rocket-chip/bootrom/bootrom.S" />
         <option value="$PROJECT_DIR$/bootrom/bootrom.S" />
@@ -184,16 +176,22 @@
         <option value="$PROJECT_DIR$/rocket-chip/src/main/scala/rocket/Frontend.scala" />
         <option value="$PROJECT_DIR$/tests/crt.S" />
         <option value="$PROJECT_DIR$/rocket-chip/src/main/scala/tile/L1Cache.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/example/PWM.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/ip/HasPeripheryUART.scala" />
         <option value="$PROJECT_DIR$/rocket-chip/bootrom/linker.ld" />
-        <option value="$PROJECT_DIR$/src/main/scala/example/Configs.scala" />
         <option value="$PROJECT_DIR$/rocket-chip/src/main/scala/system/ExampleRocketSystem.scala" />
         <option value="$PROJECT_DIR$/rocket-chip/src/main/scala/devices/tilelink/Clint.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/example/Top.scala" />
         <option value="$PROJECT_DIR$/rocket-chip/src/main/scala/coreplex/InterruptBus.scala" />
         <option value="$PROJECT_DIR$/rocket-chip/src/main/scala/regmapper/RegField.scala" />
         <option value="$PROJECT_DIR$/rocket-chip/src/main/scala/rocket/RocketCore.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/example/Configs.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/example/PWM.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/example/TestHarness.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/example/Top.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/risoc/Configs.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/risoc/PWM.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/risoc/Top.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/ip/mig_7series_0.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/risoc/TestHarness.scala" />
       </list>
     </option>
   </component>
@@ -204,10 +202,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="263" />
-    <option name="y" value="135" />
+    <option name="x" value="23" />
+    <option name="y" value="33" />
     <option name="width" value="1637" />
-    <option name="height" value="881" />
+    <option name="height" value="1034" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -224,6 +222,36 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="myrocketchip" type="58d84e3e:PackageViewProjectNode" />
+              <item name="myrocketchip" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="myrocketchip" type="58d84e3e:PackageViewProjectNode" />
+              <item name="myrocketchip" type="616d4139:PackageViewModuleNode" />
+              <item name="main.scala" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="myrocketchip" type="58d84e3e:PackageViewProjectNode" />
+              <item name="myrocketchip" type="616d4139:PackageViewModuleNode" />
+              <item name="main.scala" type="1f31426a:PackageElementNode" />
+              <item name="NoDebug.scala" type="6117b065:FileNode" />
+            </path>
+            <path>
+              <item name="myrocketchip" type="58d84e3e:PackageViewProjectNode" />
+              <item name="myrocketchip" type="616d4139:PackageViewModuleNode" />
+              <item name="main.scala" type="1f31426a:PackageElementNode" />
+              <item name="NoDebug.scala" type="6117b065:FileNode" />
+              <item name="HasNoDebugModuleImp" type="ce8f04f3:TypeDefinitionNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -268,8 +296,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -277,49 +303,11 @@
               <item name="myrocketchip" type="b2602c69:ProjectViewProjectNode" />
               <item name="myrocketchip" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="myrocketchip" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myrocketchip" type="462c0819:PsiDirectoryNode" />
-              <item name="rocket-chip" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="myrocketchip" type="b2602c69:ProjectViewProjectNode" />
-              <item name="myrocketchip" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="myrocketchip" type="58d84e3e:PackageViewProjectNode" />
-              <item name="myrocketchip" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="myrocketchip" type="58d84e3e:PackageViewProjectNode" />
-              <item name="myrocketchip" type="616d4139:PackageViewModuleNode" />
-              <item name="main.scala" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="myrocketchip" type="58d84e3e:PackageViewProjectNode" />
-              <item name="myrocketchip" type="616d4139:PackageViewModuleNode" />
-              <item name="main.scala" type="1f31426a:PackageElementNode" />
-              <item name="NoDebug.scala" type="6117b065:FileNode" />
-            </path>
-            <path>
-              <item name="myrocketchip" type="58d84e3e:PackageViewProjectNode" />
-              <item name="myrocketchip" type="616d4139:PackageViewModuleNode" />
-              <item name="main.scala" type="1f31426a:PackageElementNode" />
-              <item name="NoDebug.scala" type="6117b065:FileNode" />
-              <item name="HasNoDebugModuleImp" type="ce8f04f3:TypeDefinitionNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -393,9 +381,9 @@
     </configuration>
     <configuration name="elaberate" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="example.Generator" />
+      <option name="MAIN_CLASS_NAME" value="risoc.Generator" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="out\production example TestHarness example My512MEMPlusPWMConfig" />
+      <option name="PROGRAM_PARAMETERS" value="out\production risoc TestHarness risoc My512MEMPlusPWMConfig" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -423,7 +411,7 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="firrtl.Driver" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="-i out/production/example.My512MEMPlusPWMConfig.fir -o out/production/example.My512MEMPlusPWMConfig.v -X verilog --infer-rw TestHarness --repl-seq-mem -c:TestHarness:-o:out/production/example.My512MEMPlusPWMConfig.conf -faf out/production/example.My512MEMPlusPWMConfig.anno -ffaaf" />
+      <option name="PROGRAM_PARAMETERS" value="-i out/production/risoc.My512MEMPlusPWMConfig.fir -o out/production/risoc.My512MEMPlusPWMConfig.v -X verilog --infer-rw TestHarness --repl-seq-mem -c:TestHarness:-o:out/production/risoc.My512MEMPlusPWMConfig.conf -faf out/production/risoc.My512MEMPlusPWMConfig.anno -ffaaf" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -554,22 +542,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="263" y="135" width="1637" height="881" extended-state="0" />
+    <frame x="23" y="33" width="1637" height="1034" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32329988" sideWeight="0.50475585" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12903225" sideWeight="0.52124286" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30769232" sideWeight="0.5339252" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17963752" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10289389" sideWeight="0.47875714" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30769232" sideWeight="0.46607482" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28296438" sideWeight="0.48720682" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="IvyIDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29866835" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31388712" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25266525" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -581,7 +570,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1961824" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19056785" sideWeight="0.53304905" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26564005" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -643,97 +631,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/testchipip/src/main/scala/SerialAdapter.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/tile/LazyRoCC.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/local/edu.berkeley.cs/chisel3_2.11/3.1-SNAPSHOT/srcs/chisel3_2.11-sources.jar!/chisel3/util/Counter.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="58" column="24" lean-forward="true" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/diplomacy/DeviceTree.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/system/ExampleRocketSystem.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/coreplex/RTC.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootrom/linker.ld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootrom/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rocket-chip/bootrom/bootrom.S">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/link.ld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/pwm.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/crt.S">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="182" column="0" lean-forward="true" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/coreplex/PeripheryBus.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rocket-chip/bootrom/linker.ld">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -797,13 +694,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/coreplex/Ports.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/coreplex/Ports.scala" />
     <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/devices/debug/DebugTransport.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="446">
@@ -832,27 +723,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/devices/debug/Periphery.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="31" column="36" lean-forward="false" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/coreplex/RocketCoreplex.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="174" column="18" lean-forward="false" selection-start-line="174" selection-start-column="18" selection-end-line="174" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/example/Top.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/coreplex/RocketCoreplex.scala" />
     <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/diplomacy/Resources.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
@@ -895,21 +766,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/tilelink/IntNodes.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="69" column="32" lean-forward="false" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/tile/Interrupts.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1302">
-          <caret line="67" column="13" lean-forward="false" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/tilelink/IntNodes.scala" />
     <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/regmapper/RegField.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
@@ -938,74 +795,164 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/tile/RocketTile.scala">
+    <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/coreplex/Configs.scala" />
+    <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/coreplex/InterruptBus.scala" />
+    <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/rocket/RocketCore.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/example/Configs.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1764">
-          <caret line="90" column="40" lean-forward="false" selection-start-line="90" selection-start-column="40" selection-end-line="90" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/coreplex/Configs.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="36" column="51" lean-forward="false" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
-          <folding />
+        <state relative-caret-position="1890">
+          <caret line="203" column="27" lean-forward="false" selection-start-line="203" selection-start-column="27" selection-end-line="203" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/tile/FPU.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
+        <state relative-caret-position="21">
           <caret line="45" column="21" lean-forward="false" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/system/Configs.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
+        <state relative-caret-position="21">
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/coreplex/InterruptBus.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1470">
-          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/devices/tilelink/CLINT.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
+        <state relative-caret-position="21">
           <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/rocket/CSR.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6405">
+        <state relative-caret-position="21">
           <caret line="313" column="30" lean-forward="false" selection-start-line="313" selection-start-column="30" selection-end-line="313" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/tile/Interrupts.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="67" column="13" lean-forward="false" selection-start-line="67" selection-start-column="13" selection-end-line="67" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/tile/RocketTile.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="16" column="37" lean-forward="false" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/example/Configs.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/example/PWM.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/example/Top.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/example/TestHarness.scala" />
+    <entry file="file://$PROJECT_DIR$/testchipip/src/main/scala/SerialAdapter.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="196" column="28" lean-forward="true" selection-start-line="196" selection-start-column="28" selection-end-line="196" selection-end-column="28" />
+          <folding>
+            <element signature="e#20#36#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/system/ExampleRocketSystem.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="17" column="30" lean-forward="true" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/subsystem/BaseSubsystem.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2037">
+          <caret line="99" column="110" lean-forward="true" selection-start-line="99" selection-start-column="110" selection-end-line="99" selection-end-column="110" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/rocket/RocketCore.scala">
+    <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/devices/debug/Periphery.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/risoc/PWM.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="78" column="6" lean-forward="false" selection-start-line="78" selection-start-column="6" selection-end-line="78" selection-end-column="6" />
+          <folding>
+            <element signature="e#15#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testchipip/src/main/scala/Unittests.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/config/Config.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="35" lean-forward="false" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/ip/mig_7series_0.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="38" lean-forward="true" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+          <folding>
+            <element signature="e#12#28#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rocket-chip/src/main/scala/system/TestHarness.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/risoc/Configs.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding>
+            <element signature="e#15#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/risoc/Top.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
-          <caret line="210" column="33" lean-forward="false" selection-start-line="210" selection-start-column="33" selection-end-line="210" selection-end-column="33" />
-          <folding />
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <element signature="e#15#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/risoc/TestHarness.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="e#15#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1087,7 +1034,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>firrtl_2.11</last-edited>
+          <last-edited>json4s-jackson_2.11-3.5.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
